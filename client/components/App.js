@@ -13,11 +13,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                <a href="/"> main</a>
+                <Link to="/">Go to main</Link>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href='/info'>info</a>
+                <Link to="/info">Go to info</Link>
                 <Switch>
-                    <Route exact path="/" render={() => <h1>kawaii world</h1>} />
+                    <Route exact path="/" render={() => <h1>{this.props.count}</h1>} />
                     <Route exact path="/info" render={() => <h1>v kawaii world ;)</h1>} />
                 </Switch>
             </div>
